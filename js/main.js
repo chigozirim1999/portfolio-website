@@ -106,3 +106,21 @@ let swiper = new Swiper(".mySwiper", {
     mousewheel: true,
     keyboard: true,
 });
+
+/* Testimonial Swiper */
+let swiperTestimonial = new Swiper(".testimonial__container", {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 48,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicbullets: true,
+    },
+    breakpoints:{
+        568:{
+            slidesPerView: 2,
+        }
+    }
+});
