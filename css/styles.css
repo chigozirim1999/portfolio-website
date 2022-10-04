@@ -7,7 +7,7 @@
 
   /*== Colors ==*/
   /* change to favourite color */
-  --hue-color: 250;
+  --hue-color: 230;
 
   /* Hsl color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -65,6 +65,31 @@
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
   }
+}
+/* variable for dark theme */
+body.dark-theme{
+    /* Hsl color mode */
+  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, , 75%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --container-color: hsl(var(--hue-color), 29%, 16%);
+}
+/* Button Dark/Light */
+.nav__btns{
+  display: flex;
+  align-items: center;
+}
+
+.change-theme{
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: var(--mb-1);
+  cursor: pointer;
+}
+.change-theme:hover{
+  color: var(--first-color);
 }
 
 /*== Base ==*/
@@ -231,6 +256,11 @@ img {
 /* active link */
 .active-link{
   color: var(--first-color);
+}
+
+/* change background header */
+.scroll-header{
+  box-shadow: 0 -1px 4px rgba(0, 0, 0.15);
 }
 
 /*== Home ==*/
@@ -906,4 +936,32 @@ img {
 .footer__link,
 .footer__social{
   color: #fff;
+}
+
+/* Scroll Up */
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  /* bottom: 5rem; */
+  bottom: -20%;
+  background-color: var(--first-color);
+  opacity: .8;
+  padding: 0 .3rem;
+  border-radius: .4rem;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+}
+
+.scrollup:hover{
+  background-color: var(--first-color-alt);
+}
+
+.scrollup__icon{
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* show scroll */
+.show-scroll{
+  bottom: 5rem;
 }
