@@ -1,10 +1,10 @@
-/*== For menu to show while hidden */
+/*== For menu to show while hidden ==*/
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close')
 
 /*== Show Menu ==*/
-/*== Validate if constant exists */
+/*== Validate if constant exists ==*/
 if(navToggle){
     navToggle.addEventListener('click', () =>{
         navMenu.classList.add('show-menu')
@@ -91,7 +91,7 @@ modalCloses.forEach((modalClose) => {
 })
 
 /* Swiper */
-let swiper = new Swiper(".mySwipr", {
+let swiper = new Swiper(".mySwiper", {
     cssMode: true,
     loop: true,
 
